@@ -118,4 +118,4 @@ It is intended for small services, APIs, and scripts where a full ORM is unneces
 
 License
 
-MIT
+None
