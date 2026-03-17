@@ -1,6 +1,14 @@
 # postgresql.js
 postgresql.js
 
+vector modality layer for lambda calculus
+
+
+<img width="1226" height="1005" alt="vector_schematic" src="https://github.com/user-attachments/assets/b45a435f-30db-47d7-80af-a53ca340f793" />
+
+
+
+
 postgresql.js
 
 A minimal PostgreSQL utility for Node.js that provides simple database access and CRUD-style query execution with a lightweight interface.
