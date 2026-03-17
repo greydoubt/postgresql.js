@@ -61,7 +61,7 @@ CRUD Examples
 Create
 await db.query(
   "INSERT INTO users(name,email) VALUES($1,$2)",
-  ["Alice","alice@email.com"]
+  ["Set","satoshin@gmx.com"]
 )
 Read
 const result = await db.query(
