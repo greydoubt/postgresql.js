@@ -197,7 +197,7 @@ console.log(result.rows)
 Update
 await db.query(
   "UPDATE users SET name=$1 WHERE id=$2",
-  ["Bob",1]
+  ["Set",1]
 )
 Delete
 await db.query(
