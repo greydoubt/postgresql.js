@@ -1,1 +1,1 @@
-
+import * from "./scripts.js"
