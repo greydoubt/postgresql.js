@@ -1,0 +1,8 @@
+{
+  "schema_sql": [
+    "CREATE TABLE users (id SERIAL PRIMARY KEY, name TEXT, email TEXT UNIQUE, created_at TIMESTAMP DEFAULT NOW());",
+    "CREATE TABLE products (id SERIAL PRIMARY KEY, name TEXT, price NUMERIC(10,2), metadata JSONB);",
+    "CREATE TABLE orders (id SERIAL PRIMARY KEY, user_id INT REFERENCES users(id), total NUMERIC(10,2), created_at TIMESTAMP DEFAULT NOW());",
+    "CREATE TABLE order_items (id SERIAL PRIMARY KEY, order_id INT REFERENCES orders(id), product_id INT REFERENCES products(id), quantity INT);"
+  ]
+}
