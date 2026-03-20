@@ -6,35 +6,35 @@
 
     "select_columns": "SELECT column1, column2 FROM table_name;",
 
-  "where_clause": "SELECT * FROM table_name WHERE condition;",
+    "where_clause": "SELECT * FROM table_name WHERE condition;",
 
-  "insert": "INSERT INTO table_name (column1, column2) VALUES (value1, value2);",
+    "insert": "INSERT INTO table_name (column1, column2) VALUES (value1, value2);",
 
-  "update": "UPDATE table_name SET column1 = value1 WHERE condition;",
+    "update": "UPDATE table_name SET column1 = value1 WHERE condition;",
 
-  "delete": "DELETE FROM table_name WHERE condition;",
+    "delete": "DELETE FROM table_name WHERE condition;",
 
-  "order_by": "SELECT * FROM table_name ORDER BY column1 ASC;",
+    "order_by": "SELECT * FROM table_name ORDER BY column1 ASC;",
 
-  "group_by": "SELECT column1, COUNT(*) FROM table_name GROUP BY column1;",
+    "group_by": "SELECT column1, COUNT(*) FROM table_name GROUP BY column1;",
 
-  "join_inner": "SELECT a.*, b.* FROM table_a a INNER JOIN table_b b ON a.id = b.id;",
+    "join_inner": "SELECT a.*, b.* FROM table_a a INNER JOIN table_b b ON a.id = b.id;",
 
-  "join_left": "SELECT a.*, b.* FROM table_a a LEFT JOIN table_b b ON a.id = b.id;",
+    "join_left": "SELECT a.*, b.* FROM table_a a LEFT JOIN table_b b ON a.id = b.id;",
 
-  "join_right": "SELECT a.*, b.* FROM table_a a RIGHT JOIN table_b b ON a.id = b.id;",
+    "join_right": "SELECT a.*, b.* FROM table_a a RIGHT JOIN table_b b ON a.id = b.id;",
 
-  "limit": "SELECT * FROM table_name LIMIT 10;",
+    "limit": "SELECT * FROM table_name LIMIT 10;",
 
-  "distinct": "SELECT DISTINCT column1 FROM table_name;",
+    "distinct": "SELECT DISTINCT column1 FROM table_name;",
 
-  "count": "SELECT COUNT(*) FROM table_name;",
+    "count": "SELECT COUNT(*) FROM table_name;",
 
-  "max": "SELECT MAX(column1) FROM table_name;",
+    "max": "SELECT MAX(column1) FROM table_name;",
 
-  "min": "SELECT MIN(column1) FROM table_name;",
+    "min": "SELECT MIN(column1) FROM table_name;",
 
-  "avg": "SELECT AVG(column1) FROM table_name;"
+    "avg": "SELECT AVG(column1) FROM table_name;"
 
 },
 
