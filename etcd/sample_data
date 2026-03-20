@@ -1,0 +1,8 @@
+{
+  "sample_data_sql": [
+    "INSERT INTO users (name, email) VALUES ('Alice', 'alice@example.com'), ('Bob', 'bob@example.com');",
+    "INSERT INTO products (name, price, metadata) VALUES ('Laptop', 1200.00, '{\"brand\": \"Dell\", \"specs\": {\"ram\": \"16GB\", \"cpu\": \"i7\"}}'), ('Phone', 800.00, '{\"brand\": \"Apple\", \"specs\": {\"storage\": \"128GB\"}}');",
+    "INSERT INTO orders (user_id, total) VALUES (1, 2000.00), (2, 800.00);",
+    "INSERT INTO order_items (order_id, product_id, quantity) VALUES (1, 1, 1), (1, 2, 1), (2, 2, 1);"
+  ]
+}
