@@ -1,0 +1,67 @@
+{
+  "postgresql_queries": {
+    "basic": {
+      "select_all": "SELECT * FROM table_name;",
+      "select_with_alias": "SELECT column1 AS c1 FROM table_name;",
+      "where_ilike": "SELECT * FROM table_name WHERE column1 ILIKE '%value%';",
+      "limit_offset": "SELECT * FROM table_name LIMIT 10 OFFSET 20;",
+      "returning": "INSERT INTO table_name (col1) VALUES ('val') RETURNING id;"
+    },
+    "advanced": {
+      "upsert": "INSERT INTO table_name (id, col1) VALUES (1, 'value') ON CONFLICT (id) DO UPDATE SET col1 = EXCLUDED.col1;",
+      "cte": "WITH temp AS (SELECT * FROM table_name) SELECT * FROM temp;",
+      "recursive_cte": "WITH RECURSIVE t(n) AS (VALUES (1) UNION ALL SELECT n+1 FROM t WHERE n < 5) SELECT * FROM t;",
+      "window_function": "SELECT col1, ROW_NUMBER() OVER (PARTITION BY col2 ORDER BY col3) FROM table_name;",
+      "case_statement": "SELECT col1, CASE WHEN col2 > 10 THEN 'high' ELSE 'low' END FROM table_name;",
+      "coalesce": "SELECT COALESCE(col1, 'default') FROM table_name;",
+      "nullif": "SELECT NULLIF(col1, col2) FROM table_name;"
+    },
+    "indexes": {
+      "create_index": "CREATE INDEX idx_name ON table_name (column1);",
+      "create_unique_index": "CREATE UNIQUE INDEX idx_name ON table_name (column1);",
+      "partial_index": "CREATE INDEX idx_name ON table_name (column1) WHERE column2 IS NOT NULL;",
+      "gin_index_jsonb": "CREATE INDEX idx_jsonb ON table_name USING GIN (jsonb_column);"
+    },
+    "json_jsonb": {
+      "create_json": "SELECT '{\"name\": \"John\", \"age\": 30}'::jsonb;",
+      "access_field": "SELECT jsonb_column->'name' FROM table_name;",
+      "access_text": "SELECT jsonb_column->>'name' FROM table_name;",
+      "nested_access": "SELECT jsonb_column#>'{address,city}' FROM table_name;",
+      "update_field": "UPDATE table_name SET jsonb_column = jsonb_set(jsonb_column, '{name}', '\"Jane\"');",
+      "remove_key": "UPDATE table_name SET jsonb_column = jsonb_column - 'age';",
+      "contains": "SELECT * FROM table_name WHERE jsonb_column @> '{\"name\": \"John\"}';",
+      "exists_key": "SELECT * FROM table_name WHERE jsonb_column ? 'name';",
+      "array_elements": "SELECT jsonb_array_elements(jsonb_column->'items') FROM table_name;",
+      "build_object": "SELECT jsonb_build_object('name', col1, 'age', col2) FROM table_name;",
+      "aggregate_json": "SELECT jsonb_agg(col1) FROM table_name;"
+    },
+    "arrays": {
+      "create_array": "SELECT ARRAY[1,2,3];",
+      "unnest": "SELECT unnest(array_column) FROM table_name;",
+      "array_length": "SELECT array_length(array_column, 1) FROM table_name;",
+      "contains": "SELECT * FROM table_name WHERE array_column @> ARRAY[1];"
+    },
+    "full_text_search": {
+      "basic_search": "SELECT * FROM table_name WHERE to_tsvector('english', column1) @@ to_tsquery('english', 'word');",
+      "ranking": "SELECT column1, ts_rank(to_tsvector(column1), to_tsquery('word')) FROM table_name;"
+    },
+    "performance": {
+      "explain": "EXPLAIN SELECT * FROM table_name;",
+      "explain_analyze": "EXPLAIN ANALYZE SELECT * FROM table_name;",
+      "vacuum": "VACUUM;",
+      "analyze": "ANALYZE table_name;"
+    },
+    "transactions": {
+      "begin": "BEGIN;",
+      "commit": "COMMIT;",
+      "rollback": "ROLLBACK;",
+      "savepoint": "SAVEPOINT sp1;",
+      "rollback_to_savepoint": "ROLLBACK TO sp1;"
+    },
+    "roles_permissions": {
+      "create_user": "CREATE USER username WITH PASSWORD 'password';",
+      "grant": "GRANT SELECT, INSERT ON table_name TO username;",
+      "revoke": "REVOKE INSERT ON table_name FROM username;"
+    }
+  }
+}
