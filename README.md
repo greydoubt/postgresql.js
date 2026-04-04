@@ -41,6 +41,11 @@ Configuration
 Set your database connection values using environment variables.
 
 
+## 
+
+<img width="1448" height="1651" alt="Screenshot 2026-04-04 at 11 35 39" src="https://github.com/user-attachments/assets/35a356d3-395e-4157-8a76-ee9a1d28c1ae" />
+
+
 ## Type Codes 
 (SQLite for more info: )
 
