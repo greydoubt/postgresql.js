@@ -4,6 +4,12 @@ postgresql.js
 vector modality layer for lambda calculus
 
 
+
+
+
+<img width="1347" height="755" alt="Screenshot 2026-05-29 at 04 22 14" src="https://github.com/user-attachments/assets/15b5f8b0-badb-4ef8-8929-82a98d128a1a" />
+
+
 <img width="979" height="1052" alt="sample_schema informal toml" src="https://github.com/user-attachments/assets/6c1c5f13-1ffb-47e3-a1c0-b27ebb09bf71" />
 
 
